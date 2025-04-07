@@ -1,7 +1,12 @@
+using Addition.Service.Application.Interfaces;
+using Addition.Service.Application.Services.Impl;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IAdditionAppService, AdditionAppService>();
 
 var app = builder.Build();
 
