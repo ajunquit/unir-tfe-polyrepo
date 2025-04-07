@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{85AE62F5-7726-4E8C-9455-AA53EC2824B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{519516AB-920E-4AE7-8C0F-16480F48FE3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.WebApp", "Calculator.WebApp\Calculator.WebApp.csproj", "{FEA27915-B73B-42F5-876B-D5C4F31EB675}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA27915-B73B-42F5-876B-D5C4F31EB675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA27915-B73B-42F5-876B-D5C4F31EB675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA27915-B73B-42F5-876B-D5C4F31EB675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA27915-B73B-42F5-876B-D5C4F31EB675}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FEA27915-B73B-42F5-876B-D5C4F31EB675} = {85AE62F5-7726-4E8C-9455-AA53EC2824B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B18E45A-5685-4D85-89A6-BC7AD018C3BA}
+	EndGlobalSection
+EndGlobal
