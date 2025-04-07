@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{16
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Addition.Service", "services\unir-tfe-polyrepo-addition-module\Addition.Service\Addition.Service.csproj", "{4B112560-3A94-4CA6-86CB-A07DCA7D4C62}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{E475C0BE-916E-40BF-9B3E-C11D2A414544}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,10 +40,11 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FEA27915-B73B-42F5-876B-D5C4F31EB675} = {85AE62F5-7726-4E8C-9455-AA53EC2824B5}
+		{FEA27915-B73B-42F5-876B-D5C4F31EB675} = {E475C0BE-916E-40BF-9B3E-C11D2A414544}
 		{F7FA2F61-9F43-40B9-B72E-674787B39FF9} = {519516AB-920E-4AE7-8C0F-16480F48FE3E}
 		{16E748B3-5896-4A0F-B9F4-CD9B7688783E} = {85AE62F5-7726-4E8C-9455-AA53EC2824B5}
 		{4B112560-3A94-4CA6-86CB-A07DCA7D4C62} = {16E748B3-5896-4A0F-B9F4-CD9B7688783E}
+		{E475C0BE-916E-40BF-9B3E-C11D2A414544} = {85AE62F5-7726-4E8C-9455-AA53EC2824B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9B18E45A-5685-4D85-89A6-BC7AD018C3BA}
