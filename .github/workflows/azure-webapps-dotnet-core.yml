@@ -23,6 +23,7 @@ env:
   AZURE_WEBAPP_NAME: webapp-tfe-unir-dev    # set this to the name of your Azure Web App
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '8.0.x'                 # set this to the .NET Core version to use
+  DIST_FOLDER: webapp
 
 on:
   push:
@@ -61,13 +62,14 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/dist
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: .net-app
-          path: ./publish
+          name: ${{ env.DIST_FOLDER }}
+          path: ${{env.DOTNET_ROOT}}/dist
+          if-no-files-found: error
 
   deploy:
     permissions:
@@ -82,7 +84,8 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: .net-app
+          name: ${{ env.DIST_FOLDER }}
+          path: ${{ env.DIST_FOLDER }}
           
       - name: Azure Login # if use publish.profile option
         uses: azure/login@v1
