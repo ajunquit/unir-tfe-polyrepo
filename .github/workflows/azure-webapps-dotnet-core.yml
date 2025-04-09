@@ -38,7 +38,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
       - uses: actions/checkout@v4
+        with:
+          submodules: 'true'  # Esto es clave para descargar submódulos
+          fetch-depth: 0      # Opcional: descarga todo el historial para submódulos
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
