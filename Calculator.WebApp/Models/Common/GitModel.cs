@@ -4,7 +4,7 @@
 
     public class GitModel
     {
-        public SubmoduleInfo Superproject { get; set; } = null!;
-        public List<SubmoduleInfo> Submodules { get; set; } = new List<SubmoduleInfo>();
+        public SubmoduleInfo Superproject { get; set; } = new(string.Empty, string.Empty);
+        public List<SubmoduleInfo> Submodules { get; set; } = new();
     }
 }
