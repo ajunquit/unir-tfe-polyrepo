@@ -43,7 +43,7 @@ jobs:
         with:
           submodules: 'recursive'
           fetch-depth: 0  # Necesario para el historial completo
-          token: ${{ secrets.GITHUB_TOKEN }}  # O usa un PAT si los submódulos son privados
+          token: ${{ secrets.PAT_POLYREPO }}  # O usa un PAT si los submódulos son privados
   
       - name: Set up Git identity
         run: |
