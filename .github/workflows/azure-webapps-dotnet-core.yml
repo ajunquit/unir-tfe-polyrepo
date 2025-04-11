@@ -41,8 +41,14 @@ jobs:
     
       - uses: actions/checkout@v4
         with:
-          submodules: 'recursive'  # valor: true, Esto es clave para descargar submódulos | valor:recursivo, para actualizar todos los submodulos
+          submodules: 'recursive'  # valor: true, Esto es clave para descargar submódulos | valor:recursive, para actualizar todos los submodulos
           fetch-depth: 0      # Opcional: descarga todo el historial para submódulos
+
+      - name: Update submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive --remote
+          git submodule foreach --recursive 'git fetch --all' 
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
