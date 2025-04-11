@@ -1,5 +1,7 @@
 using Addition.Service.Application.Interfaces;
 using Addition.Service.Application.Services.Impl;
+using Calculator.WebApp.Infrastructure.External.GitHub;
+using Calculator.WebApp.Infrastructure.External.GitHub.Impl;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IAdditionAppService, AdditionAppService>();
+builder.Services.AddScoped<IGitRepositoryAnalyzerService, GitRepositoryAnalyzerService>();
+builder.Services.AddScoped<IGitHubRepositoryService, GitHubRepositoryService>();
+builder.Services.AddScoped<IGitHubUrlParser, GitHubUrlParser>();
+
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

@@ -1,4 +1,5 @@
 using Addition.Service.Application.Interfaces;
+using Calculator.WebApp.Infrastructure.External.GitHub;
 using Calculator.WebApp.Models;
 using Calculator.WebApp.Models.Common;
 using Microsoft.AspNetCore.Mvc;
@@ -8,15 +9,21 @@ namespace Calculator.WebApp.Controllers
 {
     public class HomeController(
         IAdditionAppService additionAppService,
-        ILogger<HomeController> logger
+        ILogger<HomeController> logger,
+        IGitRepositoryAnalyzerService gitRepositoryAnalyzerService,
+        IConfiguration configuration
         ) : Controller
     {
         private readonly ILogger<HomeController> _logger = logger;
+        private readonly IGitRepositoryAnalyzerService _gitRepositoryAnalyzerService = gitRepositoryAnalyzerService;
+        private readonly IConfiguration _configuration = configuration;
         private readonly IAdditionAppService _additionAppService = additionAppService;
+        public CalculatorModel CalculatorModel { get; set; } = new CalculatorModel();
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            CalculatorModel.GitModel = await _gitRepositoryAnalyzerService.AnalyzeRepositoryAsync(_configuration.GetValue<string>("Git:Superproject"), _configuration.GetValue<string>("Git:Branch"));
+            return await Task.FromResult(View(CalculatorModel));
         }
 
         public IActionResult Privacy()
