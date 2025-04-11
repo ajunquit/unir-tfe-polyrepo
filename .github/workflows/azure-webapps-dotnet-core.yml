@@ -68,7 +68,7 @@ jobs:
           if [[ -n $(git status --porcelain) ]]; then
             echo "Changes detected, creating commit..."
             git commit -m "chore: update submodules to latest versions [skip ci]"
-            git push master
+            git push origin/master
           else
             echo "No changes in submodules detected"
           fi
