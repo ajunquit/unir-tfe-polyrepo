@@ -34,7 +34,6 @@ permissions:
   contents: read
 
 jobs:
-
   update-submodules:
       runs-on: ubuntu-latest
       
