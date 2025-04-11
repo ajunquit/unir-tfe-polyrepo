@@ -41,7 +41,7 @@ jobs:
     
       - uses: actions/checkout@v4
         with:
-          submodules: 'true'  # Esto es clave para descargar submódulos
+          submodules: 'recursive'  # valor: true, Esto es clave para descargar submódulos | valor:recursivo, para actualizar todos los submodulos
           fetch-depth: 0      # Opcional: descarga todo el historial para submódulos
 
       - name: Set up .NET Core
