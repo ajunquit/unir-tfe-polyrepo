@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.WebApp", "src\pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.WebApp.Test", "test\Calculator.WebApp.Test\Calculator.WebApp.Test.csproj", "{E7488FFD-82C6-4B8A-9AB9-5CBB51DCB393}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Addition.Service", "src\modules\addition-module\Addition.Service\Addition.Service.csproj", "{C4B73771-11B3-4301-BC7C-78018A53E6FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Addition.Module", "src\modules\addition-module\Addition.Service\Addition.Module.csproj", "{C4B73771-11B3-4301-BC7C-78018A53E6FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
