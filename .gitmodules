@@ -1,4 +1,3 @@
-[submodule "src/services/unir-tfe-polyrepo-addition-module"]
-	path = src/services/unir-tfe-polyrepo-addition-module
+[submodule "src/services"]
+	path = src/services
 	url = https://github.com/ajunquit/unir-tfe-polyrepo-addition-module.git
-	branch = master
